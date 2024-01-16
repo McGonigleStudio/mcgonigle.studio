@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import logo from "../assets/images/logo.webp"
+import banner from "../assets/images/banner.webp"
+import logoDark from "../assets/images/logo-dark.webp"
+import bannerDark from "../assets/images/banner-dark.webp"
+---
+<section>
+    <div class="flex p-1 items-center justify-center">  
+        <Image src={logo} alt="Logo" class="dark:hidden h-28 w-auto"/>
+        <Image src={banner} alt="Logo" class="dark:hidden h-14 w-auto ml-2"/>
+        <!-- Dark Mode -->
+        <Image src={logoDark} alt="Logo" class="hidden dark:block h-28 w-auto"/>
+        <Image src={bannerDark} alt="Logo" class="hidden dark:block h-14 w-auto ml-2"/>
+    </div>
+</section>

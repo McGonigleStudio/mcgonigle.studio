@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/navigation.astro"
+import { Image } from 'astro:assets';
+import logo from "../assets/images/logo.webp"
+import banner from "../assets/images/banner.webp"
+import logoDark from "../assets/images/logo-dark.webp"
+import bannerDark from "../assets/images/banner-dark.webp"
+---
+<BaseLayout title="Professional Web Solutions">
+	<section>
+        <div class="flex flex-col items-stretch justify-between h-[100svh] gap-4">
+            <header class=" border-b dark:border-indigo-900">
+                <div class="flex p-1 items-center justify-center">  
+                    <Image src={logo} alt="Logo" class="dark:hidden h-28 w-auto"/>
+                    <Image src={banner} alt="Logo" class="dark:hidden h-14 w-auto ml-2"/>
+                    <!-- Dark Mode -->
+                    <Image src={logoDark} alt="Logo" class="hidden dark:block h-28 w-auto"/>
+                    <Image src={bannerDark} alt="Logo" class="hidden dark:block h-14 w-auto ml-2"/>
+                </div>
+            </header>
+            <div class="text-center px-1 space-y-6">
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl 2xl:text-9xl font-extrabold capitalize tracking-tighter max-w-6xl xl:max-w-screen-xl mx-auto">Affordable &amp; professional web solutions</h1>
+                <h2 class="text-2xl sm:text-5xl font-semibold tracking-tight">Pro websites for small business</h2>
+                <p class="text-sm sm:text-lg px-1">Transform your website and elevate your business with tried and trusted <br class="hidden md:block"> website development, hosting &amp; support services.</p>
+                <div class="flex flex-wrap justify-center px-2">
+                    <a href="" class="btn btn-lg w-full md:max-w-sm btn-primary capitalize text-2xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current mr-3" height="16" width="16" viewBox="0 0 512 512"><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg>
+                    Let's get started</a>
+                </div>
+            </div>
+            <div class="flex flex-wrap lg:flex-row-reverse justify-center items-center gap-5">
+                <Navigation />
+            </div> 
+            
+        </div>
+    </section>
+</BaseLayout>
