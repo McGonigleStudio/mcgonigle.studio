@@ -2,7 +2,17 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				"hand": ['"Nanum Pen Script"', 'cursive'],
+				"code": ['"code-saver"', 'sans-serif' ]
+			},
+			fontSize: {
+				'10xl': '9rem',
+				'11xl': '10rem',
+				'12xl': '11rem',
+			}
+		},
 	},
 	daisyui: {
 		themes: [
